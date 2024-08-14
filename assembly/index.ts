@@ -23,6 +23,7 @@ import { BST } from "metashrew-as/assembly/indexer/bst";
 
 import { ordinals } from "./protobuf";
 import { SUBSIDIES_TABLE } from "./subsidies";
+import { processInscriptionForBRC20, processInscriptionTransferForBRC20 } from "metashrew-brc20/assembly/brc20";
 
 import {
   SAT_TO_OUTPOINT,
@@ -318,6 +319,10 @@ class Index {
         OUTPOINT_TO_SEQUENCE_NUMBERS.select(outpoint).appendValue<u64>(
           sequenceNumber,
         );
+	const body = inscription.body();
+	if (body !== null) {
+          processInscriptionForBRC20(sequenceNumber, tx.outs[outputIndex].script, body);
+	}
       } else {
         const previousOutput = tx.ins[i].previousOutput().toArrayBuffer();
         const inscriptionsForOutpoint =
@@ -344,6 +349,7 @@ class Index {
           OUTPOINT_TO_SEQUENCE_NUMBERS.select(outpoint).appendValue<u64>(
             inscriptionsForOutpoint[j],
           );
+	  processInscriptionTransferForBRC20(inscriptionsForOutpoint[j], previousOutput, outpoint);
         }
       }
     }

@@ -1,10 +1,8 @@
-# metashrew-ord
+# metashrew-drc20
 
-Implementation of [https://github.com/ordinals/ord](https://github.com/ordinals/ord) using BST structures for sat ranges.
+BRC20 implementation for the dogecoin DRC20 structure.
 
-No use of hardcoded block subsidies, so this implementation is compatible with Dogecoin, in addition to Bitcoin.
-
-Fork this repository to implement arbitrary metaprotocols that are built on inscriptions.
+Forked from [https://github.com/sandshrewmetaprotocols/metashrew-shibes](https://github.com/sandshrewmetaprotocols/metashrew-shibes) with imports from [https://github.com/sandshrewmetaprotocols/metashrew-brc20](https://github.com/sandshrewmetaprotocols/metashrew-brc20) to properly handle variable block rewards, as it is done in the dogelabs ordinals implementation.
 
 ## Author
 

@@ -21,7 +21,8 @@
   "dependencies": {
     "@protobuf-ts/plugin": "^2.9.4",
     "ethers": "^6.12.2",
-    "hdkey": "^2.1.0"
+    "hdkey": "^2.1.0",
+    "metashrew-brc20": "https://github.com/sandshrewmetaprotocols/metashrew-brc20"
   },
   "devDependencies": {
     "@protobuf-ts/protoc": "^2.9.4",
