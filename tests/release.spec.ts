@@ -242,7 +242,8 @@ const satRangesForTransaction = async (program, tx) => {
   return result;
 };
 
-describe("metashrew-ord", () => {
+// TODO: replace ordinals tests with DRC20/BRC20
+describe("metashrew-drc20", () => {
   it("should index satranges", async () => {
     const program = buildProgram();
     program.setBlockHeight(0);
