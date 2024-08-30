@@ -2,7 +2,7 @@
   "version": "0.1.0",
   "main": "lib/index.js",
   "bin": {
-    "metashrew-shibes": "./bin/metashrew-shibes.js"
+    "metashrew-drc20": "./bin/metashrew-drc20.js"
   },
   "scripts": {
     "asbuild:debug": "asc assembly/index.ts --target debug --enable threads --config asconfig.json",
@@ -45,6 +45,6 @@
     "ts-mocha": "^10.0.0",
     "typescript": "^5.3.3"
   },
-  "name": "metashrew-shibes",
-  "description": "metashrew-shibes"
+  "name": "metashrew-drc20",
+  "description": "metashrew-drc20"
 }
